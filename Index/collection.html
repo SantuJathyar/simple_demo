@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collections | UrbanWear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+        body{background:#f6f6f6;color:#333;}
+
+        /* HEADER */
+        header{
+            background:#111;
+            color:#fff;
+            padding:20px 60px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+/* 🌈 Transparent Navbar */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      z-index: 1000;
+      transition: 0.3s ease;
+    }
+
+        header h1{font-size:26px;}
+        nav a{
+            color:#fff;
+            text-decoration:none;
+            margin-left:25px;
+            padding:8px 14px;
+            border-radius:20px;
+            transition:0.3s;
+        }
+        nav a:hover, nav a.active{
+            background:#f4b400;
+            color:#000;
+        }
+
+        /* BANNER */
+        .banner{
+            height:50vh;
+            background:url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d') center/cover no-repeat;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#fff;
+            position:relative;
+        }
+        .banner::before{
+            content:"";
+            position:absolute;
+            inset:0;
+            background:rgba(0,0,0,0.55);
+        }
+        .banner h2{
+            position:relative;
+            font-size:42px;
+            animation:fade 1.2s ease;
+        }
+        @keyframes fade{
+            from{opacity:0; transform:translateY(20px);} 
+            to{opacity:1; transform:translateY(0);} 
+        }
+
+        /* COLLECTION GRID */
+        section{padding:60px;}
+        section h3{text-align:center;font-size:32px;margin-bottom:40px;}
+        .collections{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:30px;
+        }
+        .collection{
+            position:relative;
+            border-radius:18px;
+            overflow:hidden;
+            cursor:pointer;
+            box-shadow:0 10px 25px rgba(0,0,0,0.15);
+        }
+        .collection img{
+            width:100%;
+            height:380px;
+            object-fit:cover;
+            transition:transform 0.4s ease;
+        }
+        .collection:hover img{transform:scale(1.08);}
+        .overlay{
+            position:absolute;
+            inset:0;
+            background:linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+            display:flex;
+            align-items:flex-end;
+            padding:25px;
+            color:#fff;
+        }
+        .overlay h4{font-size:22px;margin-bottom:5px;}
+        .overlay span{font-size:14px;color:#f4b400;}
+
+        /* FOOTER */
+        footer{
+            background:#000;
+            color:#aaa;
+            text-align:center;
+            padding:20px;
+        }
+
+        @media(max-width:768px){
+            header{flex-direction:column;}
+            nav{margin-top:10px;}
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>yuvraj clothes center</h1>
+    <nav>
+         <a href="index.html">Home</a>
+        <a href="Men.html">Men</a>
+        <a href="women.html">Women</a>
+        <a href="collection.html">Collections</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section>
+    <h3>Explore Styles</h3>
+    <div class="collections">
+        <div class="collection">
+            <img src="https://images.unsplash.com/photo-1520975916090-3105956dac38">
+            <div class="overlay">
+                <div>
+                    <h4>Men's Collection</h4>
+                    <span>Casual • Formal • Party</span>
+                </div>
+            </div>
+        </div>
+        <div class="collection">
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+            <div class="overlay">
+                <div>
+                    <h4>Women's Collection</h4>
+                    <span>Trendy • Elegant • Festive</span>
+                </div>
+            </div>
+        </div>
+        <div class="collection">
+            <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
+            <div class="overlay">
+                <div>
+                    <h4>Kids Collection</h4>
+                    <span>Comfort • Fun • Style</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

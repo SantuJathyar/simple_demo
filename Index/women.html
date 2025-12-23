@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men | UrbanWear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+        body{background:#f6f6f6;color:#333;}
+
+        /* HEADER */
+        header{
+            background:#111;
+            color:#fff;
+            padding:20px 60px;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+        header h1{font-size:26px;}
+        nav a{
+            color:#fff;
+            text-decoration:none;
+            margin-left:25px;
+            padding:8px 14px;
+            border-radius:20px;
+            transition:0.3s;
+        }
+        nav a:hover, nav a.active{
+            background:#f4b400;
+            color:#000;
+        }
+
+/* 🌈 Transparent Navbar */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(6px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 60px;
+      z-index: 1000;
+      transition: 0.3s ease;
+    }
+
+        /* BANNER */
+        .banner{
+            height:50vh;
+            background:url('https://images.unsplash.com/photo-1520975916090-3105956dac38') center/cover no-repeat;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:#fff;
+            position:relative;
+        }
+        .banner::before{
+            content:"";
+            position:absolute;
+            inset:0;
+            background:rgba(0,0,0,0.5);
+        }
+        .banner h2{
+            position:relative;
+            font-size:40px;
+            animation:fade 1.2s ease;
+        }
+        @keyframes fade{
+            from{opacity:0; transform:translateY(20px);} 
+            to{opacity:1; transform:translateY(0);} 
+        }
+
+        /* PRODUCTS */
+        section{padding:60px;}
+        section h3{text-align:center;font-size:32px;margin-bottom:40px;}
+        .products{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:30px;
+        }
+        .product{
+            background:#fff;
+            border-radius:15px;
+            overflow:hidden;
+            box-shadow:0 10px 25px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+        .product:hover{transform:translateY(-8px);}
+        .product img{width:100%;height:300px;object-fit:cover;}
+        .info{padding:20px;text-align:center;}
+        .info h4{margin-bottom:8px;}
+        .info p{color:#f4b400;font-weight:600;margin-bottom:12px;}
+        .info button{
+            padding:10px 20px;
+            border:none;
+            background:#111;
+            color:#fff;
+            border-radius:25px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+        .info button:hover{background:#f4b400;color:#000;}
+
+        /* FOOTER */
+        footer{
+            background:#000;
+            color:#aaa;
+            text-align:center;
+            padding:20px;
+        }
+
+        @media(max-width:768px){
+            header{flex-direction:column;}
+            nav{margin-top:10px;}
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>yuvraj clothes center</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="Men.html">Men</a>
+        <a href="women.html">Women</a>
+        <a href="collection.html">Collections</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section>
+    <h3>Trending for Women</h3>
+    <div class="products">
+        <div class="product">
+            <img src="jjj.jpg">
+            <div class="info">
+                <h4>Designer Dress</h4>
+                <p>₹2,199</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="kkk.jpg">
+            <div class="info">
+                <h4>Casual Top</h4>
+                <p>₹1,299</p>
+            </div>
+        </div>
+        <div class="product">
+            <img src="aaa.jpg">
+            <div class="info">
+                <h4>Party Wear</h4>
+                <p>₹3,499</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>
